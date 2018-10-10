@@ -1,0 +1,54 @@
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  background: white;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  position: fixed;
+  height: 60px !important;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.main {
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  margin-top: 60px;
+}
+
+.mainInner {
+  display: table;
+  height: table;
+  width: 100%;
+  text-align: center;
+}
+
+#sidebarMenu {
+  height: 100px;
+  position: fixed;
+  left: 0px;
+  width: 250px;
+  margin-top: 60px;
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  background: linear-gradient(180deg, #fc242f 0%, #3f5efb 100%)
+}
+
+.sidebarMenuInner {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10)
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Airbnb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+<!--TOP NAV-->
+<div class="main" id="fixed">
+  <div class="top-nav clearfix" id="mytop-nav">
+    <a href="index.html" class="logo">
+        <img src="./logo.png" alt="airbnb"> 
+    </a> 
+    <ul>
+      <li><a href="#">Available Order</a></li>
+      <li><a href="#">Cart</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+</div>
+<!--MOTO-->
+  <div class="row">
+    <h1 id="moto"><span>Welcome!</span> Manage sales and products<br />in Store Manager</h1>
+  </div>
+<!--MOTO-->
+<!---->
+<div id="searchbar-wrapper">
+<div class="row">
+  <form method="GET" action="index.html" id="searchbar">
+    <input type="text" name="destination" placeholder="Product Search">
+    <input type="submit" name="search" value="Search">
+  </form>
+</div>
+</div>
+</div>
+<!--DISPLAY SLIDERS--> 
+<div class="row">
+<div class="container">
+  <div class="box">
+    <div class="picture">
+      <img src="/img/adidas.jpg" alt="Picture">
+    </div> 
+    <div class="text">
+      <span>8</span>
+      <p>SNEAKERS</p>
+      <h5>VANS 2018 EDITION</h5>  
+      <h5>PRICE: N3500</h5> 
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="box">
+      <div class="picture">
+        <img src="/img/adidas.jpg" alt="Picture">
+      </div> 
+      <div class="text">
+        <span>8</span>
+        <p>SNEAKERS</p>
+        <h5>VANS 2018 EDITION</h5>  
+        <h5>PRICE: N3500</h5> 
+        <button>Add to Cart</button>
+      </div>
+  </div>
+  <div class="box">
+      <div class="picture">
+        <img src="/img/adidas.jpg" alt="Picture">
+      </div> 
+      <div class="text">
+        <span>8</span>
+        <p>SNEAKERS</p>
+        <h5>VANS 2018 EDITION</h5>  
+        <h5>PRICE: N3500</h5>
+        <button>Add to Cart</button>
+      </div>
+  </div>
+  <div class="box">
+      <div class="picture">
+        <img src="/img/adidas.jpg" alt="Picture">
+      </div> 
+      <div class="text">
+        <span>8</span>
+        <p>SNEAKERS</p>
+        <h5>VANS 2018 EDITION</h5>  
+        <h5>PRICE: N3500</h5> 
+        <button>Add to Cart</button>
+      </div>
+  </div>
+</div>
+</div> 
+  <!--DISPLAY SLIDERS-->
+
+<!--LOGIN MODAL-->
+<div class="bg-modal">
+  <div class="modal-content">
+    <div class="close">+</div>
+    <img src="./user_icon.svg" alt="usericon">
+    <form action="index.html" method="GET">
+      <input type="text" placeholder="E-mail">
+      <input type="password" placeholder="Password">
+      <input type="button" value="Login">
+    </form>
+  </div>
+</div>
+<!--SIGN UP MODAL-->
+<div class="bg-modal-1">
+  <div class="modal-content-1">
+    <div class="close-1">+</div>
+    <img src="./user_icon.svg" alt="usericon">
+    <form action="index.html">
+      <input type="text" placeholder="First Name">
+      <input type="text" placeholder="Last Name">
+      <input type="text" placeholder="E-mail">
+      <input type="password" placeholder="Enter Password Min 5" id="password" onkeyup='check();'>
+      <input type="password" placeholder="Confirm Password" id="confirm_password" onkeyup='check();'>
+      <span id='message'></span>
+      <input type="button" value="Register" id=signup-btn>
+    </form>
+  </div>
+</div>
+<!--FOOTER-->
+<div id="footer">
+    <h5 class="copyright">An Andela project by Oluwaseun Akogun | © 2018</h5>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

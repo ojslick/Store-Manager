@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sale Records</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/salerecords.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <script src="/js/salerecords.js"></script>
+</head>
+<body>
+  <!--TOP NAV-->
+  <div class="main" id="fixed">
+    <div class="top-nav clearfix" id="mytop-nav">
+      <a href="index.html" class="logo">
+          <img src="./logo.png" alt="airbnb"> 
+      </a> 
+      <ul>
+        <li><a href="#">Available Order</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+  </div>
+  <div class='table-wrapper'>
+    <table>
+      <h2>Sale Records</h2>
+      <thead>
+        <tr>
+          <th>MERCHANDISE ID</th>
+          <th>QUATITY</th>
+          <th>TOTAL COST</th>
+          <th>DATE OF SALE</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>  
+        <tr>
+          <td data-label="Merchandise ID">1</td>
+          <td data-label="Item Quantity">4 item(s)<button class="view-button" id="view-modal-button">View items</button></td>
+          <td data-label="Total Cost">N6000</td>
+          <td data-label= "Date of Sale">10/03/2018 11:36PM</td>
+          <td data-label="Status">Sold</td>
+        </tr>
+        <tr>
+          <td data-label="Merchandise ID">2</td>
+          <td data-label="Item Quantity">4 item(s)<button class="view-button">View items</button></td>
+          <td data-label="Total Cost">N6000</td>
+          <td data-label= "Date of Sale">10/03/2018 11:36PM</td>
+          <td data-label="Status">Sold</td>
+        </tr>
+        <tr>
+          <td data-label="Merchandise ID">3</td>
+          <td data-label="Item Quantity">4 item(s)<button class="view-button">View items</button></td>
+          <td data-label="Total Cost">N6000</td>
+          <td data-label= "Date of Sale">10/03/2018 11:36PM</td>
+          <td data-label="Status">Sold</td>
+        </tr>
+        <tr>
+          <td data-label="Merchandise ID">4</td>
+          <td data-label="Item Quantity">3 item(s)<button class="view-button">View items</button></td>
+          <td data-label="Total Cost">N6000</td>
+          <td data-title= "Date of Sale">10/03/2018 11:36PM</td>
+          <td data-label="Status">Sold</td>
+        </tr>
+        <tr>
+          <td data-label="Merchandise ID">5</td>
+          <td data-label="Item Quantity">3 item(s)<button class="view-button">View items</button></td>
+          <td data-label="Total Cost">N5000</td>
+          <td data-label= "Date of Sale">10/03/2018 11:36PM</td>
+          <td data-label="Status">Sold</td>
+        </tr>
+        <tr>
+          <td data-label="Merchandise ID">6</td>
+          <td data-label="Item Quantity">3 item(s)<button class="view-button">View items</button></td>
+          <td data-label="Total Cost">N6000</td>
+          <td data-label= "Date of Sale">10/03/2018 11:36PM</td>
+          <td data-label= "Date of Sale">Sold</td>
+        </tr>
+    </table>
+  </div>
+  <!--VIEW ITEMS MODAL-->
+  <div class="view-modal">
+    <div class="view-modal-content">
+      <div class="view-modal-close">+</div>
+      <table id="table" class="view-table">
+          <h2>View Sale Records</h2>
+          <thead>
+            <tr>
+              <th>MERCHANDISE ID</th>
+              <th>ITEM NAME</th>
+              <th>QUATITY</th>
+              <th>COST</th>
+              <th>DATE OF SALE</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>  
+            <tr>
+              <td data-label="Merchandise ID">1</td>
+              <td data-label="Item">T-shirt</td>
+              <td data-label="Item Quantity">1 item</td>
+              <td data-label="Cost">N2000</td>
+              <td data-label= "Date of Sale">10/03/2018 11:36PM</td>
+              <td data-label="Status">Sold</td>
+            </tr>
+            <tr>
+              <td data-label="Merchandise ID">2</td>
+              <td data-label="Item">T-shirt</td>
+              <td data-label="Item Quantity">1 item</td>
+              <td data-label="Cost">N2000</td>
+              <td data-label= "Date of Sale">10/03/2018 11:36PM</td>
+              <td data-label="Status">Sold</td>
+            </tr>
+            <tr>
+              <td data-label="Merchandise ID">3</td>
+              <td data-label="Item">T-shirt</td>
+              <td data-label="Item Quantity">1 item</td>
+              <td data-label="Cost">N1000</td>
+              <td data-label= "Date of Sale">10/03/2018 11:36PM</td>
+              <td data-label="Status">Sold</td>
+            </tr>
+            <tr>
+              <td data-label="Merchandise ID">4</td>
+              <td data-label="Item">T-shirt</td>
+              <td data-label="Item Quantity">1 item</td>
+              <td data-label="Cost">N1000</td>
+              <td data-label= "Date of Sale">10/03/2018 11:36PM</td>
+              <td data-label="Status">Sold</td>
+            </tr>
+        </table>
+    </div>
+  </div>
+  <!--FOOTER-->
+  <div id="footer">
+      <h5 class="copyright">An Andela project by Oluwaseun Akogun | © 2018</h5>
+  </div>
+  
+</body>
+</html>
