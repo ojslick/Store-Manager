@@ -7,26 +7,207 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/css/admin_view_all_products.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="/js/admin_view_all_products.js"></script>
 </head>
 <body>
-  <!--SIDE MENU-->
-  <div class=header></div>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
- 
-  <div id="sidebarMenu">
-    <h1 class="title">Store Manager</h1>
-    <ul class="sidebarMenuInner">
-      <li><a id="add-product"></a><span>Add Product</span></li>
-      <li><a href="#" id="create-profile"></a><span>Create Attendant Profile</span></li>
-      <li><a href="#"></a><span>Manage Products</span></li>
-      <li><a href="#"></a><span>View Attendant Sales</span></li>
-      <li><a href="#"></a><span>View Attendant Profile</span></li>
+<!-- TOP NAV-->
+<div id="fixed">
+  <div class="top-nav clearfix">
+    <a href="index.html" class="logo">
+        <img src="./logo.png" alt="airbnb"> 
+    </a> 
+    <ul>
+      <li><a href="#">Logout</a></li>
     </ul>
   </div>
+</div>
+<!--HAMBURGER MENU-->
+<div class=".hamburger-nav">
+  <label for="toggle">&#9776;</label>
+  <input type="checkbox" id="toggle">
+  <div class="hamburger-menu">
+    <a href="#" class="add-product"><i class="fas fa-plus-circle"></i>Add Product</a>
+    <a href="#" class="create-profile"><i class="fas fa-user-alt"></i>Create Attendant Profile</a>
+    <a href="#" class="manage-products"><i class="fas fa-chart-pie"></i>Manage Products</a>
+    <a href="#" class="sales-records"><i class="fab fa-readme"></i>View Sales Records</a>
+    <a href="#" class="attendant-profile"><i class="fas fa-users"></i>View Attendant Profile</a>
+    <a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+  </div>
+</div>
+
+<!--SIDE MENU-->
+<div class="container">
+  <div class="sidebarMenu">
+    <ul>
+      <li><a href="#" id="add-product"><i class="fas fa-plus-circle"></i>Add Product</a></li> 
+      <li><a href="#" id="create-profile"><i class="fas fa-user-alt"></i>Create Attendant Profile</a></li> 
+      <li><a href="#"><i class="fas fa-chart-pie"></i>Manage Products</a></li>    
+      <li><a href="#" id="sales-records"><i class="fab fa-readme"></i>View Sales Records</a></li> 
+      <li><a href="#" class="attendant-profile"><i class="fas fa-users"></i>View Attendant Profile</a></li>
+    </ul>
+  </div>
+<!--ALL PRODUCTS TABLE-->
+<div class='table-wrapper'>
+  <table>
+    <h2>Available Products</h2>
+    <thead>
+      <tr>
+        <th>MERCHANDISE</th>
+        <th>QUATITY</th>
+        <th>COST</th>
+        <th>STOCK DATE</th>
+        <th>STATUS</th>
+      </tr>
+    </thead>  
+      <tr>
+        <td data-label="Merchandise">T-shirt</td>
+        <td data-label="Item Quantity">30 item(s)<button class="view-button" id="view-modal-button">View item</button></td>
+        <td data-label="Cost">N6000</td>
+        <td data-label= "Stock Date">10/03/2018 11:36PM</td>
+        <td data-label="Status">In Stock</td>
+      </tr>
+      <tr>
+        <td data-label="Merchandise">T-shirt</td>
+        <td data-label="Item Quantity">30 item(s)<button class="view-button">View item</button></td>
+        <td data-label="Cost">N6000</td>
+        <td data-label= "Stock Date">10/03/2018 11:36PM</td>
+        <td data-label="Status">In Stock</td>
+      </tr>
+      <tr>
+        <td data-label="Merchandise">T-shirt</td>
+        <td data-label="Item Quantity">30 item(s)<button class="view-button">View item</button></td>
+        <td data-label="Cost">N6000</td>
+        <td data-label= "Stock Date">10/03/2018 11:36PM</td>
+        <td data-label="Status">In Stock</td>
+      </tr>
+      <tr>
+        <td data-label="Merchandise">T-shirt</td>
+        <td data-label="Item Quantity">30 item(s)<button class="view-button">View item</button></td>
+        <td data-label="Cost">N6000</td>
+        <td data-title= "Stock Date">10/03/2018 11:36PM</td>
+        <td data-label="Status">In Stock</td>
+      </tr>
+      <tr>
+        <td data-label="Merchandise">T-shirt</td>
+        <td data-label="Item Quantity">30 item(s)<button class="view-button">View item</button></td>
+        <td data-label="Cost">N5000</td>
+        <td data-label= "Stock Date">10/03/2018 11:36PM</td>
+        <td data-label="Status">In Stock</td>
+      </tr>
+      <tr>
+        <td data-label="Merchandise">T-shirt</td>
+        <td data-label="Item Quantity">30 item(s)<button class="view-button">View item</button></td>
+        <td data-label="Cost">N6000</td>
+        <td data-label= "Stock Date">10/03/2018 11:36PM</td>
+        <td data-label= "Status">In Stock</td>
+      </tr>
+  </table>
+</div>
+</div>
+<!--VIEW ITEMS MODAL-->
+<div class="view-modal">
+  <div class="view-modal-content">
+    <div class="view-modal-close">+</div>
+    <table id="table" class="view-table">
+      <h2>Product Details</h2>
+      <thead>
+        <tr>
+          <th>MERCHANDISE</th>
+          <th>QUANTITY</th>
+          <th>MINIMUM INVENTORY QUANTITY</th>
+          <th>STOCK DATE</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>  
+        <tr>
+          <td data-label="Merchandise">T-shirt</td>
+          <td data-label="Item Quantity">30 item(s)</td>
+          <td data-label="Minimum Inventory Quantity">20 items</td>
+          <td data-label= "Stock Date">10/03/2018 11:36PM</td>
+          <td data-label="Status">In Stock</td>
+        </tr>
+    </table>
+  </div>
+</div>
+<!--Create Attendant Profile-->
+<div class="view-modal-create-profile">
+  <div class="view-modal-create-profile-content">
+    <div class="view-modal-create-profile-close">+</div>
+    <h2>Create Attendant Profile</h2>
+    <form action="">
+      <input type="text" placeholder="First Name">
+      <input type="text" placeholder="Last Name">
+      <input type="text" placeholder="Home Address">
+      <input type="email" placeholder="E-mail">
+      <input type="number" placeholder="Phone Number">
+      <input type="file">
+      <input type="button" value="Register">
+    </form>
+  </div>
+</div>
+<!--ADD PRODUCT-->
+<div class="view-modal-add-product">
+  <div class="view-modal-add-product-content">
+    <div class="view-modal-add-product-close">+</div>
+    <h2>Add Product</h2>
+    <form action="">
+      <input type="text" placeholder="Product Name">
+      <input type="number" placeholder="Quantity in Stock">
+      <input type="file">
+      <input type="button" value="Add Product">
+    </form>
+  </div>
+</div>
+<!--SALES RECORDS-->
+<div class="view-modal-sales-records">
+  <div class="view-modal-sales-records-content">
+    <div class="view-modal-sales-records-close">+</div>
+    <table id="table" class="view-table">
+      <h2>All Attendants Sale Records</h2>
+      <thead>
+        <tr>
+          <th>ATTENDANT NAME</th>
+          <th>MERCHANDISE</th>
+          <th>QUANTITY SOLD</th>
+          <th>COST</th>
+          <th>DATE</th>
+        </tr>
+      </thead>  
+        <tr>
+          <td data-label="Attendant Name">Oyeniran Ahmed</td>
+          <td data-label="Merchandise">T-shirt</td>
+          <td data-label="Quantity Sold">20 item(s)</td>
+          <td data-label="Cost">N20000</td>
+          <td data-label= "Date">11/03/2018</td>
+        </tr>
+        <tr>
+          <td data-label="Attendant Name">Alade Aristotle</td>
+          <td data-label="Merchandise">T-shirt</td>
+          <td data-label="Quantity Sold">30 item(s)</td>
+          <td data-label="Cost">N30000</td>
+          <td data-label= "Date">12/03/2018</td>
+        </tr>
+        <tr>
+          <td data-label="Attendant Name">Lekan Onaolapo</td>
+          <td data-label="Merchandise">T-shirt</td>
+          <td data-label="Quantity Sold">15 item(s)</td>
+          <td data-label="Cost">N15000</td>
+          <td data-label= "Date">13/03/2018</td>
+        </tr>
+        <tr>
+          <td data-label="Attendant Name">Samuel Ige</td>
+          <td data-label="Merchandise">T-shirt</td>
+          <td data-label="Quantity Sold">25 item(s)</td>
+          <td data-label="Cost">N25000</td>
+          <td data-label= "Date">14/03/2018</td>
+        </tr>
+    </table>
+  </div>
+</div>
+<!--FOOTER-->
+<div id="footer">
+  <h5 class="copyright">An Andela project by Oluwaseun Akogun | © 2018</h5>
+</div>
 </body>
 </html>
