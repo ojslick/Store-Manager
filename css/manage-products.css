@@ -100,14 +100,11 @@ ul, ol {
 .logo img {
   position: relative;
   padding: 15px 18px;
-  width: 150px;
+  width: 130px;
   vertical-align: middle;
 }
 
-#fixed .top-nav .logo img {
-  margin-top: -60px;
-  margin-bottom: -60px;
-}
+
 
 .top-nav ul {
   float: right;
@@ -136,6 +133,7 @@ ul, ol {
   }
   .top-nav ul li:last-of-type {
     margin-right: 25px;
+    display: none;
   }
 }
 
@@ -268,6 +266,15 @@ ul, ol {
   }
 }
 
+@media all and (max-width: 375px) {
+  #searchbar input[type="submit"] {
+    width: 120px;
+  }
+  #searchbar input[type="text"] {
+    width: calc(100vw -  181px)
+  }
+}
+
 
 /* DISPLAY SLIDERS CSS */
 .container {
@@ -282,10 +289,9 @@ ul, ol {
 
 .box {
   width: 20%;
-  height: auto;
+  height: 300px;
   margin: 20px;
   box-sizing: border-box;
-  margin-bottom: 100px;
   position: relative;
 }
 
@@ -295,19 +301,14 @@ ul, ol {
 
 .picture {
   width: 100%;
-  height: auto;
+  height: 300px;
   position: relative;
   border-radius: 10px;
-}
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 .picture img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: 10px;
   overflow: hidden;
@@ -340,30 +341,8 @@ ul, ol {
   font-weight: bold;
 }
 
-.img-btn {
-  /* margin-left: 15px;
-  position: absolute;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 20px;
-  padding-top: 9px;
-  padding-bottom: 11px; */
-  border: none;
-}
-
-.btn-left {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 4px 0px !important;
-  background: rgb(255, 255, 255) !important;
-  border-radius: 4px !important;
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: transparent;
-  cursor: pointer;
-  outline: none;
-  height: 25px;
-}
-
-.btn-right {
+.text button {
+  margin-top: 8px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 4px 0px !important;
   background: rgb(255, 255, 255) !important;
   border-radius: 4px !important;
