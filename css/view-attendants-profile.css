@@ -95,12 +95,13 @@ ul, ol {
 .logo img {
   position: relative;
   padding: 15px 18px;
-  width: 100px;
+  width: 150px;
   vertical-align: middle;
 }
 
 #fixed .top-nav .logo img {
-  border-right: 1px solid #eee;
+  margin-top: -60px;
+  margin-bottom: -60px;
 }
 
 .top-nav ul {
