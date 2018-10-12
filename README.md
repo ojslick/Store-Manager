@@ -12,5 +12,5 @@ A platform that helps store owners manage sales and product inventory records
 Project is managed [here](https://www.pivotaltracker.com/n/projects/2204333) using the project management tool, Pivotal Tracker.
 
 ## Templates
-UI templates are hosted on Github pages
+UI templates are hosted on Github pages [here](https://ojslick.github.io/Store-Manager/)
 
