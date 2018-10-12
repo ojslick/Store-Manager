@@ -156,6 +156,8 @@ ul, ol {
   font-weight: 700;
 }
 
+/*LOGIN AND REGISTER CARD*/
+
 .aligner {
   display: flex;
   align-items: center;
@@ -187,16 +189,18 @@ ul, ol {
   background-color: #ff5a5f;
   height: 30px;
   color: white;
-  display: inline-block;
+  padding-bottom: 10px;
+  display: grid;
   width: 100%;
   font-weight: 600;
   text-align: center;
   border-radius: 8px;
+  margin-bottom: 10px;
   font-size: 20px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 #a3 {
@@ -235,6 +239,18 @@ h4 {
   font-weight: bold;
 }
 
+@media all and (max-width: 750px) {
+  .card {
+    align-items: center;
+    justify-content: center;
+  }
+  #footer {
+    display: none;
+  }
+}
+
+
+/*LOGIN MODAL*/
 .bg-modal {
   width: 100%;
   height: 100%;
@@ -532,7 +548,7 @@ h4 {
 /* FOOTER CSS */
 #footer {
   position: relative;
-  display: black;
+  display: block;
   width: 100%;
   height: 50px;
   background-color: #fff;
