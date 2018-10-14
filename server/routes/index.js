@@ -8,5 +8,6 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 router.get('/products', productController.getAllProduct);
+router.get('/products/:id', productController.getSingleProduct);
 
 export default router;
