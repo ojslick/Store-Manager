@@ -1,4 +1,4 @@
-const saleOrder = [
+const saleOrders = [
   {
     id: 1,
     quantity: 4,
@@ -52,4 +52,4 @@ const saleOrder = [
   },
 ];
 
-export default saleOrder;
+export default saleOrders;
