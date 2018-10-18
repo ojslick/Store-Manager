@@ -4,6 +4,7 @@ import ProductController from '../controllers/ProductController';
 import SaleOrdersController from '../controllers/SaleOrdersController';
 import AuthController from '../controllers/AuthController';
 import CreateProductClass from '../controllers/CreateProductController';
+import CreateSaleClass from '../controllers/CreateSaleOrder';
 import Check from '../middleware/Check';
 
 const router = express.Router();
@@ -16,5 +17,6 @@ router.get('/products/:id', ProductController.getSingleProduct);
 router.get('/sales', Check.isAdmin, SaleOrdersController.getAllSales);
 router.get('/sales/:id', SaleOrdersController.getSingleSale);
 router.post('/products', Check.isAdmin, CreateProductClass.createProduct);
+router.post('/sales', Check.isAttendant, CreateSaleClass.createSale);
 router.post('/users/login', AuthController.login);
 export default router;
